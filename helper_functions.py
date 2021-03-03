@@ -7,5 +7,14 @@ from os import listdir, remove
 # 3. 'trade_order.p'
 def check_for_and_del_io_files():
     # Your code goes here.
+    dirs = listdir("/")
+    targetlist = ['currency_pair.txt', 'currency_pair_history.csv', 'trade_order.p']
 
-    pass # nothing gets returned by this function, so end it with 'pass'.
+    for i in range(len(dirs)):
+        if dirs[i] in targetlist:
+            remove("E:/myHomework1/" + dirs[i])
+
+    pass  # nothing gets returned by this function, so end it with 'pass'.
+
+
+check_for_and_del_io_files()
